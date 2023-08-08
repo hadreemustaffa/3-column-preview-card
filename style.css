@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+	/* fonts */
+	--ff-primary: 'Big Shoulders Display', cursive;
+	--ff-secondary: 'Lexend Deca', sans-serif;
+
+	--fw-regular: 400;
+	--fw-bold: 700;
+
+	--fs-lg: 2.5rem;
+	--fs-sm: 0.938rem;
+
+	--ff-heading: var(--ff-primary);
+	--fs-heading: var(--fs-lg);
+
+	--ff-body: var(--ff-secondary);
+	--fs-body: var(--fs-sm);
+
+	/* colors */
+	--clr-primary: hsl(0, 0%, 95%);
+	--clr-secondary: hsla(0, 0%, 100%, 0.75);
+
+	--clr-section-1: hsl(31, 77%, 52%);
+	--clr-section-2: hsl(184, 100%, 22%);
+	--clr-section-3: hsl(179, 100%, 13%);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+img {
+	width: 25%;
+}
+
+h1 {
+	font-family: var(--ff-heading);
+	font-size: var(--fs-heading);
+	color: var(--clr-primary);
+}
+p,
+button {
+	font-family: var(--ff-body);
+	font-size: var(--fs-body);
+	color: var(--clr-secondary);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	width: 63vw;
+	height: 57vh;
+	display: flex;
+	flex-direction: row;
+	border-radius: 10px;
+}
+
+section {
+	height: 100%;
+	padding: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+button {
+	width: 70%;
+	padding: 15px;
+	border-radius: 30px;
+	border: 0;
+}
+
+#sedans {
+	background-color: var(--clr-section-1);
+}
+#suvs {
+	background-color: var(--clr-section-2);
+}
+#luxury {
+	background-color: var(--clr-section-3);
+}
+
+.attribution {
+	font-family: var(--ff-body);
+	font-size: 12px;
+	text-align: center;
+	color: var(--clr-section-2);
+	padding: 20px 0 10px;
+}
+.attribution a {
+	color: var(--clr-section-1);
+	opacity: 0.5;
+}
+.attribution a:hover {
+	opacity: 1;
+}
