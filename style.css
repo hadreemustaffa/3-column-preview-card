@@ -8,8 +8,6 @@
 	--fw-regular: 400;
 	--fw-bold: 700;
 
-	/* --fs-lg: 2.75rem;
-	--fs-sm: 1.25rem; */
 	--fs-lg: 2.5rem;
 	--fs-sm: 0.938rem;
 
@@ -37,7 +35,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 }
 
 html,
@@ -71,10 +68,11 @@ body {
 
 main {
 	width: 63vw;
-	height: 57vh;
+	min-width: 885px;
 	display: flex;
 	flex-direction: row;
 	border-radius: 10px;
+	overflow: hidden;
 }
 
 section {
@@ -94,7 +92,8 @@ article > h1 {
 }
 
 button {
-	width: 70%;
+	margin-top: 35%;
+	width: 75%;
 	padding: 0.9rem 1rem;
 	border-radius: 2rem;
 	border: none;
@@ -147,7 +146,7 @@ button:hover {
 	font-size: 12px;
 	text-align: center;
 	color: var(--clr-section-2);
-	padding: 20px 0 10px;
+	padding: 20px 0;
 }
 .attribution a {
 	color: var(--clr-section-1);
@@ -155,4 +154,36 @@ button:hover {
 }
 .attribution a:hover {
 	opacity: 1;
+}
+
+@media (max-width: 900px) {
+	body {
+		height: fit-content;
+	}
+	main {
+		margin: 15% auto;
+		width: 88%;
+		min-width: 282px;
+		max-width: 422px;
+		height: 55%;
+		flex-direction: column;
+	}
+	section {
+		padding: 15%;
+	}
+	button {
+		margin-top: 10%;
+		width: 65%;
+	}
+}
+
+@media (min-width: 1921px) {
+	:root {
+		--fs-lg: 3.5rem;
+		--fs-sm: 1.25rem;
+	}
+	main {
+		max-width: 1600px;
+		max-height: 720px;
+	}
 }
