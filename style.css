@@ -41,6 +41,12 @@ html,
 body {
 	height: 100%;
 }
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
 
 img {
 	width: 25%;
@@ -59,13 +65,6 @@ button {
 	line-height: 1.75;
 }
 
-body {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
 main {
 	width: 63vw;
 	min-width: 885px;
@@ -80,8 +79,7 @@ section {
 	padding: 5%;
 }
 
-section,
-article {
+section {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -146,7 +144,7 @@ button:hover {
 	font-size: 12px;
 	text-align: center;
 	color: var(--clr-section-2);
-	padding: 20px 0;
+	padding: 10px 0;
 }
 .attribution a {
 	color: var(--clr-section-1);
@@ -161,7 +159,7 @@ button:hover {
 		height: fit-content;
 	}
 	main {
-		margin: 15% auto;
+		margin: 56px auto;
 		width: 88%;
 		min-width: 282px;
 		max-width: 422px;
