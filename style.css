@@ -42,6 +42,7 @@ body {
 	height: 100%;
 }
 body {
+	background-color: var(--clr-primary);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -67,8 +68,8 @@ button {
 }
 
 main {
-	width: 63vw;
-	min-width: 885px;
+	width: 62vw;
+	min-width: 870px;
 	min-height: 487px;
 	display: flex;
 	flex-direction: row;
