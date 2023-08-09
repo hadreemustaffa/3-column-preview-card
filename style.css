@@ -57,6 +57,7 @@ h1 {
 	font-size: var(--fs-heading);
 	color: var(--clr-primary);
 }
+
 p,
 button {
 	font-family: var(--ff-body);
@@ -68,6 +69,7 @@ button {
 main {
 	width: 63vw;
 	min-width: 885px;
+	min-height: 487px;
 	display: flex;
 	flex-direction: row;
 	border-radius: 10px;
@@ -163,7 +165,6 @@ button:hover {
 		width: 88%;
 		min-width: 282px;
 		max-width: 422px;
-		height: 55%;
 		flex-direction: column;
 	}
 	section {
