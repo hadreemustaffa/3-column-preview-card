@@ -1,189 +1,160 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 
-:root {
-	/* fonts */
-	--ff-primary: 'Big Shoulders Display', cursive;
-	--ff-secondary: 'Lexend Deca', sans-serif;
-
-	--fw-regular: 400;
-	--fw-bold: 700;
-
-	--fs-lg: 2.5rem;
-	--fs-sm: 0.938rem;
-
-	--ff-heading: var(--ff-primary);
-	--fs-heading: var(--fs-lg);
-
-	--ff-body: var(--ff-secondary);
-	--fs-body: var(--fs-sm);
-
-	/* colors */
-	--clr-primary: hsl(0, 0%, 95%);
-	--clr-secondary: hsla(0, 0%, 100%, 0.75);
-
-	--clr-section-1: hsl(31, 77%, 52%);
-	--clr-section-2: hsl(184, 100%, 22%);
-	--clr-section-3: hsl(179, 100%, 13%);
-}
-
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 * {
-	margin: 0;
-	padding: 0;
-}
-
-html,
-body {
-	height: 100%;
+  margin: 0;
 }
 body {
-	background-color: var(--clr-primary);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
-
-img {
-	width: 25%;
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
-
-h1 {
-	font-family: var(--ff-heading);
-	font-size: var(--fs-heading);
-	color: var(--clr-primary);
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
-
 p,
-button {
-	font-family: var(--ff-body);
-	font-size: var(--fs-body);
-	color: var(--clr-secondary);
-	line-height: 1.75;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --ff-primary: 'Lexend Deca', sans-serif;
+  --ff-secondary: 'Big Shoulders Display', sans-serif;
+
+  --fs-lg: 2.5rem;
+  --fs-md: 0.938rem;
+
+  --fw-bold: 700;
+  --fw-regular: 400;
+
+  --clr-bg-primary: hsl(0, 0%, 95%);
+  --clr-text-headings: hsl(0, 0%, 95%);
+  --clr-text-body: hsla(0, 0%, 100%, 0.75);
+
+  --clr-bg-section-1: hsl(31, 77%, 52%);
+  --clr-bg-section-2: hsl(184, 100%, 22%);
+  --clr-bg-section-3: hsl(179, 100%, 13%);
+}
+
+/* typography */
+body {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-md);
+  color: var(--clr-text-body);
+}
+h2 {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+  color: var(--clr-text-headings);
+  text-transform: uppercase;
+}
+.card__section a {
+  text-decoration: none;
+}
+.card__section--sedans a {
+  color: var(--clr-bg-section-1);
+}
+.card__section--suvs a {
+  color: var(--clr-bg-section-2);
+}
+.card__section--luxury a {
+  color: var(--clr-bg-section-3);
+}
+
+.attribution * {
+  color: var(--clr-bg-section-3);
+}
+.attribution a:hover {
+  color: var(--clr-bg-section-2);
+}
+
+/* layout */
+body {
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-bg-primary);
 }
 
 main {
-	width: 62vw;
-	min-width: 870px;
-	min-height: 487px;
-	display: flex;
-	flex-direction: row;
-	border-radius: 10px;
-	overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
-section {
-	height: 100%;
-	padding: 5%;
+.card {
+  display: flex;
+  flex-direction: column;
 }
-
-section {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+.card__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem;
 }
-
-.categories > h1 {
-	padding: 12.5% 0;
+.card__section img {
+  width: 60px;
+  height: 40px;
 }
-
-button {
-	margin-top: 35%;
-	width: 75%;
-	padding: 0.9rem 1rem;
-	border-radius: 2rem;
-	border: none;
+.card__section a {
+  width: fit-content;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  background-color: var(--clr-bg-primary);
+  transition: background-color 0.25s ease-out;
 }
-
-/* SECTION COLOR */
-/* SEDANS */
-#sedans {
-	background-color: var(--clr-section-1);
+.card__section a:hover {
+  color: var(--clr-bg-primary);
+  background-color: transparent;
+  outline: 2px solid var(--clr-bg-primary);
+  outline-offset: -2px;
 }
-#sedans > button {
-	color: var(--clr-section-1);
-	border: 1px solid var(--clr-primary);
+.card__section--sedans {
+  background-color: var(--clr-bg-section-1);
 }
-#sedans > button:hover {
-	background-color: var(--clr-section-1);
+.card__section--suvs {
+  background-color: var(--clr-bg-section-2);
 }
-
-/* SUVS */
-#suvs {
-	background-color: var(--clr-section-2);
-}
-#suvs > button {
-	color: var(--clr-section-2);
-	border: 1px solid var(--clr-primary);
-}
-#suvs > button:hover {
-	background-color: var(--clr-section-2);
-}
-
-/* LUXURY */
-#luxury {
-	background-color: var(--clr-section-3);
-}
-#luxury > button {
-	color: var(--clr-section-3);
-	border: 1px solid var(--clr-primary);
-}
-#luxury > button:hover {
-	background-color: var(--clr-section-3);
-}
-
-button:hover {
-	color: var(--clr-primary) !important;
-	cursor: pointer;
+.card__section--luxury {
+  background-color: var(--clr-bg-section-3);
 }
 
 .attribution {
-	font-family: var(--ff-body);
-	font-size: 12px;
-	text-align: center;
-	color: var(--clr-section-2);
-	padding: 10px 0;
-}
-.attribution a {
-	color: var(--clr-section-1);
-	opacity: 0.5;
-}
-.attribution a:hover {
-	opacity: 1;
+  text-align: center;
+  padding-bottom: 1rem;
 }
 
-@media (max-width: 900px) {
-	body {
-		height: fit-content;
-	}
-	main {
-		margin: 56px auto;
-		width: 88%;
-		min-width: 282px;
-		max-width: 422px;
-		flex-direction: column;
-	}
-	section {
-		padding: 15%;
-	}
-	button {
-		margin-top: 10%;
-		width: 65%;
-	}
+@media (min-width: 36rem) {
+  main {
+    max-width: 33rem;
+  }
 }
-
-@media (min-width: 1921px) {
-	:root {
-		--fs-lg: 3.5rem;
-		--fs-sm: 1.25rem;
-	}
-	main {
-		max-width: 1600px;
-		max-height: 720px;
-	}
+@media (min-width: 62rem) {
+  main {
+    max-width: 56rem;
+    flex-direction: row;
+  }
 }
