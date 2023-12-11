@@ -56,13 +56,6 @@ h6 {
   --clr-bg-section-3: hsl(179, 100%, 13%);
 }
 
-/* typography */
-body {
-  font-family: var(--ff-primary);
-  font-weight: var(--fw-regular);
-  font-size: var(--fs-md);
-  color: var(--clr-text-body);
-}
 h2 {
   font-family: var(--ff-secondary);
   font-weight: var(--fw-bold);
@@ -70,31 +63,15 @@ h2 {
   color: var(--clr-text-headings);
   text-transform: uppercase;
 }
-.card__section a {
-  text-decoration: none;
-}
-.card__section--sedans a {
-  color: var(--clr-bg-section-1);
-}
-.card__section--suvs a {
-  color: var(--clr-bg-section-2);
-}
-.card__section--luxury a {
-  color: var(--clr-bg-section-3);
-}
 
-.attribution * {
-  color: var(--clr-bg-section-3);
-}
-.attribution a:hover {
-  color: var(--clr-bg-section-2);
-}
-
-/* layout */
 body {
   display: grid;
   place-content: center;
   background-color: var(--clr-bg-primary);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-md);
+  color: var(--clr-text-body);
 }
 
 main {
@@ -119,12 +96,14 @@ main {
   width: 60px;
   height: 40px;
 }
+
 .card__section a {
   width: fit-content;
   padding: 0.75rem 2rem;
   border-radius: 2rem;
   background-color: var(--clr-bg-primary);
   transition: background-color 0.25s ease-out;
+  text-decoration: none;
 }
 .card__section a:hover {
   color: var(--clr-bg-primary);
@@ -132,6 +111,7 @@ main {
   outline: 2px solid var(--clr-bg-primary);
   outline-offset: -2px;
 }
+
 .card__section--sedans {
   background-color: var(--clr-bg-section-1);
 }
@@ -141,10 +121,25 @@ main {
 .card__section--luxury {
   background-color: var(--clr-bg-section-3);
 }
+.card__section--sedans a {
+  color: var(--clr-bg-section-1);
+}
+.card__section--suvs a {
+  color: var(--clr-bg-section-2);
+}
+.card__section--luxury a {
+  color: var(--clr-bg-section-3);
+}
 
 .attribution {
   text-align: center;
   padding-bottom: 1rem;
+}
+.attribution * {
+  color: var(--clr-bg-section-3);
+}
+.attribution a:hover {
+  color: var(--clr-bg-section-2);
 }
 
 @media (min-width: 36rem) {
@@ -155,6 +150,8 @@ main {
 @media (min-width: 62rem) {
   main {
     max-width: 58rem;
+  }
+  .card {
     flex-direction: row;
   }
 }
