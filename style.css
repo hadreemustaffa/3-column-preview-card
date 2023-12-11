@@ -149,12 +149,12 @@ main {
 
 @media (min-width: 36rem) {
   main {
-    max-width: 33rem;
+    max-width: 30rem;
   }
 }
 @media (min-width: 62rem) {
   main {
-    max-width: 56rem;
+    max-width: 58rem;
     flex-direction: row;
   }
 }
